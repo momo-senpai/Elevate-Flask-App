@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block title %}
+SignUp
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+{%  endblock %}
+{% block content %}
+
+    <div class="hero">
+      <div class="form-box">
+        <span id="title">Elevate.</span>
+
+        <form id="student" class="input-group" method="POST">
+          <select id="rights" name="rights" class="button-box">
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+          </select>
+          <input type = "text" class="input-field" id ="email" name ="email" placeholder="Email" required />
+          <input
+            type="text"
+            class="input-field"
+            id ="name"
+            name ="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            id ="password1"
+            name ="password1"
+            placeholder=" Enter Password"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            id ="password2"
+            name ="password2"
+            placeholder="Confirm Password"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            id='college'
+            name='college'
+            placeholder="School/College Name"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            id='dept'
+            name='dept'
+            placeholder="Standard/Department "
+            required
+          />
+          <input
+            type="number"
+            class="input-field"
+            id='roll'
+            name='roll_no'
+            placeholder="Roll No"
+            required
+          />
+           <input
+            type="number"
+            class="input-field"
+            id ="acad_year"
+            name ="acad_year"
+            placeholder="Academic Year"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            id ="gender"
+            name ="gender"
+            placeholder="Gender"
+            required
+          />
+          <input
+            type="number"
+            class="input-field"
+            id ="age"
+            name ="age"
+            placeholder="Age"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            id ="blood"
+            name ="blood"
+            placeholder="Blood Group"
+            required
+          />
+          
+          <input type="checkbox" class="check-box" id='tnc' name='tnc' required /><span>I agree to the <b>terms & condition</b></span>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+         </div>
+    </div>
+
+    <script>
+      var x = document.getElementById("student");
+      var y = document.getElementById("teacher");
+      var z = document.getElementById("btn");
+
+      function teacher() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+        z.style.background = "linear-gradient(to right,#72bcd4,#d4ebf2)";
+      }
+      function student() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+        z.style.background = "linear-gradient(to right, #ff8068, #ffc0b4)";
+      }
+    </script>
+{% endblock %}

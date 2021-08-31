@@ -1,0 +1,337 @@
+ .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+        }
+
+        .card {
+            background-color: #a3f7bf;
+            border: 4px solid black;
+
+        }
+
+        .card-title {
+            color: #4a47a3;
+        }
+
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 220, 2);
+            transition: 0.7s;
+        }
+
+        .label1 {
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            color: darkred;
+            font-size: 35px;
+            font-family: 'Della Respira';
+        }
+
+        .hov a:hover {
+            color: red;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 7px 8px 16px 5px rgba(0, 0, 33, 2);
+        }
+
+        body {
+            background-color: #f3f5f9;
+        }
+
+        .wrapper {
+            display: flex;
+            margin-top: 3%;
+            position: relative;
+        }
+
+
+
+        .wrapper .sidebar {
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(to right, #72bcd4, #d4ebf2);
+            padding: 30px 0px;
+            border: 2px solid black;
+            position: fixed;
+            overflow-x: scroll;
+            margin-bottom: 5%;
+            font-family: 'Acme';
+            font-size: 18px;
+        }
+
+        .wrapper .sidebar h2 {
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .wrapper .sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper .sidebar ul li {
+            padding: 15px;
+            border-bottom: 1px solid #bdb8d7;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .wrapper .sidebar img {
+            border-radius: 50%;
+            justify-content: center;
+            margin-left: 15%;
+            margin-top: auto;
+            margin-bottom: 5%;
+            ;
+            border: 1px dashed #000000;
+            background-color: white;
+        }
+
+        .wrapper .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        .wrapper .sidebar ul li a .fas {
+            width: 25px;
+        }
+
+        .wrapper .sidebar ul li:hover {
+            background: linear-gradient(to right, #72bcd4, #d4ebf2);
+            text-decoration: none;
+        }
+
+        .wrapper .sidebar ul li:hover a {
+            color: #fff;
+        }
+
+        .wrapper .main_content {
+            width: 100%;
+            margin-left: 2%;
+            margin-bottom: 3%;
+        }
+
+        .wrapper .main_content .header {
+            padding: 20px;
+            font-size: 25px;
+            background: #5a0533;
+            border-bottom: 1px solid #e0e4e8;
+            color: #fff;
+            border: 2px solid black;
+        }
+
+        .wrapper .main_content .info {
+            margin: 20px;
+            color: #717171;
+            line-height: 25px;
+        }
+
+        .wrapper .main_content .info div {
+            margin-bottom: 20px;
+        }
+
+
+        .wrapper .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+        }
+
+
+        .dropdown-btn {
+            padding-left: 0;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* On mouse-over */
+        .dropdown-btn:hover {
+            color: #f1f1f1;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        /* Add an active class to the active dropdown button */
+        .active {
+            background-color: #ad1457;
+            color: white;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+            display: none;
+            background-color: #5a0533;
+            padding-left: 8px;
+        }
+
+
+        /* Optional: Style the caret down icon */
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+            padding-top: auto;
+        }
+
+        /* Some media queries for responsiveness */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .dropdown-btn .fas {
+            width: 25px;
+        }
+.form-box {
+  width: 380px;
+  height: 300px;
+  position: fixed;
+
+  margin-left: 25%;
+  margin-top: 5%;
+  background: linear-gradient(to right, #72bcd4, #d4ebf2);
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.hero {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(banner.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.button-box {
+  width: 280px;
+  margin: 35px auto;
+  position: relative;
+
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #72bcd4, #d4ebf2);
+  border-radius: 30px;
+  transition: 0.5s;
+  font-weight: bold;
+}
+.social-icons {
+  left: 160px;
+  top: 370px;
+  position: absolute;
+  margin: 30px auto;
+  text-align: center;
+}
+.social-icons img {
+  width: 30px;
+  margin: 0 12px;
+  box-shadow: 0 0 20px #7f7f7f3d;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.input-group {
+  top: 80px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #72bcd4, #d4ebf2);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.check-box {
+  margin: 30px 10px 30px 0;
+}
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+#student {
+  left: 50px;
+}
+#teacher {
+  left: 50px;
+}
+#teacher-login {
+  background: linear-gradient(to right, #72bcd4, #d4ebf2);
+}
+#title {
+  font-size: 60px;
+  color: black;
+  font-family: cookie;
+  font-weight: bold;
+  position: absolute;
+  top: 30px;
+  left: 120px;
+  height: auto;
+}

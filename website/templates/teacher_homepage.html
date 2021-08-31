@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% block title %}
+Teacher Home
+{% endblock %}
+{% block css %}
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/dashboard.css') }}">
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/subject_addition.css') }}">
+    <!--Custom Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="../css/images/logo.png">
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/teacher_home.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js%22%3E"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js%22%3E"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js%22%3E"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js%22%3E"></script>
+{% endblock %}
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top" style="padding:8px;border:none;background: linear-gradient(to right, #72bcd4, #d4ebf2);border-bottom:1px solid black;box-shadow: 3px 3px 5px black;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="navbar-brand text-white" style="font-family:'Acme';font-size:30px;color: white;padding-right: 750px;" href="#">Welcome, Teacher</a>
+
+            </div>
+            <ul class="nav navbar-nav navbar-right collapsed hide-on-med-and-down text-white hide-on-med" id="navbar">
+                <li>
+                    <a class="mnav11" style="color:white;font-family:'Acme';font-size:25px;" href="/logout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout</a>
+                </li>
+            </ul>
+    </nav>
+    
+    <div class="wrapper">
+        <div class="sidebar col -l2 -s6">
+            <ul>
+                <li><a href="/teacher_home"><i class="fas fa-clipboard"></i>Dashboard</a></li>
+                <li><a href="/profile"><i class="fas fa-clipboard"></i>Profile</a></li>
+                <li><a href="/video"><i class="fas fa-user-edit"></i> Create Meeting</a></li>
+                <li><a href="/subject_addition"><i class="fas fa-plus"></i>Add Subject</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-sm-offset-12 col-md-10 col-md-offset-2 main">
+            <!-- container--
+
+            <?php
+            @$page =  $_GET['page'];
+            if ($page != "") {
+                if ($page == "add_s1") {
+                    include('add_see/add_s1.php');
+                }
+
+                if ($page == "add_s2") {
+                    include('add_see/add_s2.php');
+                }
+
+                if ($page == "add_s3") {
+                    include('add_see/add_s3.php');
+                }
+
+                if ($page == "add_s4") {
+                    include('add_see/add_s4.php');
+                }
+
+                if ($page == "add_s5") {
+                    include('add_see/add_s5.php');
+                }
+
+                if ($page == "add_s6") {
+                    include('add_see/add_s6.php');
+                }
+
+                if ($page == "add_s7") {
+                    include('add_see/add_s7.php');
+                }
+
+                if ($page == "add_s8") {
+                    include('add_see/add_s8.php');
+                }
+
+                if ($page == "manage_users") {
+                    include('manage_users.php');
+                }
+
+                if ($page == "disp_s1") {
+                    include('disp_see/disp_s1.php');
+                }
+
+                if ($page == "disp_s2") {
+                    include('disp_see/disp_s2.php');
+                }
+
+                if ($page == "disp_s3") {
+                    include('disp_see/disp_s3.php');
+                }
+
+                if ($page == "disp_s4") {
+                    include('disp_see/disp_s4.php');
+                }
+
+                if ($page == "disp_s5") {
+                    include('disp_see/disp_s5.php');
+                }
+
+                if ($page == "disp_s6") {
+                    include('disp_see/disp_s6.php');
+                }
+
+                if ($page == "disp_s7") {
+                    include('disp_see/disp_s7.php');
+                }
+
+                if ($page == "disp_s8") {
+                    include('disp_see/disp_s8.php');
+                }
+                if ($page == "manage_users_fst") {
+                    include('manage_users_fst.php');
+                }
+                if ($page == "add_fst") {
+                    include('add_fst/add_fst_sub.php');
+                }
+                if ($page == "manage_sub_fst") {
+                    include('add_fst/manage_fst.php');
+                }
+            } else {
+            ?>
+                <!- container end-->
+
+
+
+
+
+
+                <div class="main_content">
+                    <div>
+                        <h1 class="page-header label1" style="font-family: 'Bree serif', serif;">Dashboard</h1>
+                        <section class="section">
+                            <div class="container-fluid">
+                            	{% for subject in subjects %}
+                            <div class="container">
+						      <div class="card">
+						        <div class="card-body">
+						          <h4 class="card-title">Name: {{subject.name}}</h4>
+						          <p class="card-text">Credits: {{subject.credits}}</p>
+						          <p class="card-text">Semester:{{subject.semester}}</p>
+						        </div>
+						      </div>
+						    </div>
+						    <br>
+                        {% endfor %}
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+
+
+            <a id="back-to-top" style="color:#fff;background-color:#5a0533;border:2px solid black;" href="#" class="btn-light btn-lg back-to-top" role="button"><i class="fas fa-arrow-up"></i></a>
+            <script>
+                /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+
+                for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === "block") {
+                            dropdownContent.style.display = "none";
+                        } else {
+                            dropdownContent.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <!-- Bootstrap core JavaScript
+    ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script>
+                window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')
+            </script>
+            <script src="../js/disable.js"></script>
+            <script src="../js/scroll.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+            <script src="../js/vendor/holder.min.js"></script>
+{% endblock %}

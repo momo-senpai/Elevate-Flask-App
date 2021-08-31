@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}
+Welcome
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}" />
+{%  endblock %}
+{% block content %}
+
+    <div class="section">
+      <h1 class="text-focus-in">Elevate.</h1>
+      <br />
+      <br />
+      <h6 class="text-focus-in">Ready. Set. Elevate.</h6>
+      <button class="text-focus-in" id="btn">
+        <a href="login" class="links2">Sign-In</a>
+      </button>
+      <button class="text-focus-in" id="btn1">
+        <a href="sign-up" class="links">Sign-Up</a>
+      </button>
+      <div class="video-container">
+        <div class="color-overlay"></div>
+        <video autoplay muted>
+          <source src="{{url_for('static',filename='images/edits1.mp4') }}" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+{%  endblock %}

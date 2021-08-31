@@ -1,0 +1,17 @@
+body{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(banner.jpeg);
+}
+        #start{
+
+            background: linear-gradient(to right, #ff8068, #ffc0b4);
+            top: 425px;
+            border-radius: 20px;
+            width: auto;
+            height: 50px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            left: 775px;
+            position: absolute;
+        }

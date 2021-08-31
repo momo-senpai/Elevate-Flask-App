@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elevate|{% block title %}{% endblock %}</title>
+	<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+	{% block css %}
+	{% endblock %}
+</head>
+<body>
+	
+	{% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    {% for category, message in messages %}
+    {% if category =='error' %}
+    <div style="color:#D8000C; background-color:#FFD2D2;margin: 10px 0px; padding:12px;" class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">x</span>
+      </button>
+    </div>
+    {% else %}
+    <div style="color:#4F8A10; background-color:#DFF2BF;margin: 10px 0px; padding:12px;" class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">x</span>
+      </button>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="container">{% block content %} {% endblock %}</div>
+</body>
+</html>
